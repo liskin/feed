@@ -35,7 +35,7 @@ toEntry (Post date url content) =
      date)
     { Atom.entryAuthors = [Atom.nullPerson {Atom.personName = "J. Smith"}]
     , Atom.entryLinks = [Atom.nullLink url]
-    , Atom.entryContent = Just (Atom.TextContent content)
+    , Atom.entryContent = Just (Atom.HTMLContent content)
     }
 
 feed :: [Post] -> Atom.Feed

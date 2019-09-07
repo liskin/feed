@@ -93,7 +93,7 @@ data Entry = Entry
 
 data EntryContent
   = TextContent Text
-  | HTMLContent XML.Element
+  | HTMLContent Text
   | XHTMLContent XML.Element
   | MixedContent (Maybe Text)
                  [XML.Node]

@@ -253,11 +253,7 @@ pContent e =
   case pAttr "type" e of
     Nothing -> return (TextContent (elementTexts e))
     Just "text" -> return (TextContent (elementTexts e))
-    Just "html" -> 
-      case children e of
-        [] -> return (TextContent "")
-        [c] -> return (HTMLContent c)
-        _ -> Nothing
+    Just "html" -> return (HTMLContent (elementTexts e))
     Just "xhtml" ->
       case children e of
         [] -> return (TextContent "")
