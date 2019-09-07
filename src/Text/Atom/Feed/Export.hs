@@ -107,7 +107,7 @@ atomName :: Text -> Name
 atomName nc = Name {nameLocalName = nc, nameNamespace = Just atomNS, namePrefix = atom_prefix}
 
 atomAttr :: Text -> Text -> Attr
-atomAttr x y = (atomName x, [ContentText y])
+atomAttr x y = (Name {nameLocalName = x, nameNamespace = Nothing, namePrefix = atom_prefix}, [ContentText y])
 
 atomNode :: Text -> [Node] -> XML.Element
 atomNode x = blank_element (atomName x)
