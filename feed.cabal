@@ -101,6 +101,7 @@ test-suite tests
     Paths_feed
     Example
     Example.CreateAtom
+    ImportExport
     Text.Atom.Tests
     Text.Feed.Util.Tests
     Text.RSS.Equals
@@ -114,6 +115,7 @@ test-suite tests
     , HUnit >= 1.2 && < 1.7
     , feed
     , old-time >= 1 && < 1.2
+    , syb
     , test-framework == 0.8.*
     , test-framework-hunit == 0.3.*
     , text < 1.3
